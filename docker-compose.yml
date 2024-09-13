@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  frontend-japan:
+    container_name: frontend-japan
+    image: frontend-japan:0.0.1
+    build: .
+    volumes:
+    - ./svelte:/app/svelte
+    ports:
+      - 7072:7072
+    restart: always
